@@ -1,0 +1,58 @@
+[
+  {
+    "action":"updateList",
+    "source": "./",
+    "target": "",
+    "name":["RunAOAMain_AOA_Done.txt"],
+    "type":"f",
+    "cronSchedule":"30 * * * * ?",
+    "maxDepth":"8",
+    "retention":"0",
+    "maxRetention":"10",
+    "expectedExecutionTime":"3",
+    "listOfRecipients":"andrii.savchenko@roche.com, arkadiy.yampolskiy@roche.com",
+    "taskDescriptionForEmailNotification":"AOA Pipeline, updateList files configuration",
+    "comment": "This step supposed to create a file (filename has to be provided as a parameter) with names of the directories that include signal file."
+  },
+  {
+    "action": "move",
+    "source": "./",
+    "target": "./",
+    "name": ["test*",
+      "freq*"],
+    "type": "d",
+    "cronSchedule" : "0 56 23 * * ?",
+    "filtering" : false,
+    "retention": "0",
+    "expectedExecutionTime":"5",
+    "listOfRecipients":"andrii.savchenko@roche.com, arkadiy.yampolskiy@roche.com",
+    "taskDescriptionForEmailNotification":"AOA Pipeline, move files configuration"
+  },
+  {
+    "action": "delete",
+    "source": "./",
+    "target": "./",
+    "name": ["*alignment_summary_metrics.txt",
+      "*MIDtrimmed.bam*"],
+    "cronSchedule" : "0 33 13 * * ?",
+    "filtering" : false,
+    "retention": "0",
+    "expectedExecutionTime":"2",
+    "listOfRecipients":"andrii.savchenko@roche.com, arkadiy.yampolskiy@roche.com",
+    "taskDescriptionForEmailNotification":"AOA Pipeline, delete files configuration"
+  },
+  {
+    "action": "copy",
+    "source": "./",
+    "target": "./",
+    "name": ["h*.txt","k*.txt",
+      "*demultiplexed_R1.fastq",
+      "*demultiplexed_R2.fastq"],
+    "cronSchedule" : "0 16 15 * * ?",
+    "filtering" : false,
+    "retention": "0",
+    "expectedExecutionTime":"5",
+    "listOfRecipients":"andrii.savchenko@roche.com, arkadiy.yampolskiy@roche.com",
+    "taskDescriptionForEmailNotification":"AOA Pipeline, copy files configuration"
+  }
+]

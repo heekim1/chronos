@@ -1,0 +1,31 @@
+[
+  {
+    "action": "move",
+    "source": "/home/kimh89/test",
+    "target": "/home/kimh89/test_target",
+    "name": ["test*",
+             "freq*"],
+    "type": "d",
+    "cronSchedule" : "0 44 1 * * ?",
+    "retention": "0"
+  },
+  {
+    "action": "delete",
+    "source": "/home/kimh89/test",
+    "target": "",
+    "name": ["*alignment_summary_metrics.txt",
+             "*MIDtrimmed.bam*"],
+    "cronSchedule" : "0 7 12 * * ?",
+    "retention": "0"
+  },
+  {
+    "action": "copy",
+    "source": "/home/kimh89/test",
+    "target": "/home/kimh89/test_target",
+    "name": ["h*.txt","k*.txt",
+             "*demultiplexed_R1.fastq",
+             "*demultiplexed_R2.fastq"],
+    "cronSchedule" : "0 8 8 * * ?",
+    "retention": "42"
+  }
+]
