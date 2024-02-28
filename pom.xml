@@ -4,7 +4,7 @@
   <artifactId>chronos</artifactId><version>0.2.8</version>
   <packaging>deb</packaging>
   <parent>
-    <groupId>com.roche.bfx.ctDNA</groupId>
+    <groupId>com.example.www</groupId>
     <artifactId>ctdna-parent-pom</artifactId>
     <version>3.1.6</version>
   </parent>
